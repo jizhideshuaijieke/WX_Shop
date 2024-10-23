@@ -1,0 +1,71 @@
+<!-- 在微信小程序中，<image> 组件的 mode 属性用于控制图片的显示方式。常见的 mode 格式包括：
+
+scaleToFill：不保持纵横比，拉伸图片到填满整个容器。
+
+aspectFit：保持纵横比，缩放图片，使其长边完全显示，短边可能会留白。
+
+aspectFill：保持纵横比，缩放图片，图片的短边会完全填满容器，可能会被裁剪。
+    
+widthFix：保持纵横比，宽度不变，高度自适应。
+
+heightFix：保持纵横比，高度不变，宽度自适应。
+
+top：不缩放，显示图片顶部部分，底部可能会被裁剪。
+
+bottom：不缩放，显示图片底部部分，上部可能会被裁剪。
+
+center：不缩放，显示图片中心部分，四周可能会被裁剪。
+
+left：不缩放，显示图片左侧部分，右侧可能会被裁剪。
+
+right：不缩放，显示图片右侧部分，左侧可能会被裁剪。 -->
+<!-- 轮播图 -->
+<swiper autoplay="true" interval="3000" duration="1000" circular="true" indicator-dot="true">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <navigator url="/subpkg/goods_detail/goods_detail?goods_id">
+            <image src="{{item.image_src}}" class="swiperImage"></image>
+        </navigator>
+    </swiper-item>
+</swiper>
+<!-- 百科主体内容 -->
+<view class="baikeList">
+    <navigator class="baike" url="/pages/baike/trading/trading?title=交易" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Emerald.webp" mode="aspectFit" />
+        <text>交易</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/brewing/brewing?title=药水酿造" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Water_Bottle.webp" mode="aspectFit" />
+        <text>药水酿造</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/crafting/crafting?title=合成" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Crafting_Table.png" mode="aspectFit" />
+        <text>合成</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/enchating/enchating?title=附魔" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Enchanting_Table.webp" mode="aspectFit" />
+        <text>附魔</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/item/item?title=物品" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Apple.webp" mode="aspectFit" />
+        <text>物品</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/mob/mob?title=生物" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/White_Sheep.webp" mode="aspectFit" />
+        <text>生物</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/redstone_circuit/redstone_circuit?title=红石电路" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Redstone_Dust.webp" mode="aspectFit" />
+        <text>红石电路</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/smelting/smelting?title=烧炼" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Iron_Ore.png" mode="aspectFit" />
+        <text>烧炼</text>
+    </navigator>
+    <navigator class="baike" url="/pages/baike/block/block?title=方块" open-type="navigate">
+        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Grass_Block.png" mode="aspectFit" />
+        <text>方块</text>
+    </navigator>
+</view>
+
+<!-- 静态图片展示 -->
+<image class="staticimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/minecraft_island.png" mode="aspectFill" />

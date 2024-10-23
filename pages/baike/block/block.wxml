@@ -1,0 +1,7 @@
+<button bindtap="countAdd">按我+1</button>
+<view class="textBeautify">count值：{{count}},下拉清零</view>
+<view>
+    <view wx:for="{{colorList}}" wx:key="index" style="background-color: {{item}};" class="randomColor">
+        {{item}}
+    </view>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "rgbMaker": "/components/rgbRealChange/rgbRealChange"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "componentCommunication":"/components/componentCommunication/parentComponent/parentComponent"
+  }
+}

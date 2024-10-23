@@ -1,0 +1,2 @@
+<componentCommunication/>
+<van-button type="danger" bind:tap="getInfor">Vant&Promise</van-button>
