@@ -1,49 +1,64 @@
 {
-  "window": {
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "Minecraft百科",
-    "navigationBarBackgroundColor": "#228B22"
-  },
-  "pages": [
-    "pages/home/home",
-    "pages/forum/forum",
-    "pages/baike/trading/trading",
-    "pages/baike/brewing/brewing",
-    "pages/baike/enchating/enchating",
-    "pages/baike/block/block",
-    "pages/baike/item/item",
-    "pages/baike/mob/mob",
-    "pages/baike/crafting/crafting",
-    "pages/baike/smelting/smelting",
-    "pages/baike/redstone_circuit/redstone_circuit"
-  ],
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "世界",
-        "iconPath": "/images/tabs/home.png",
-        "selectedIconPath": "/images/tabs/home-active.png"
-      },
-      {
-        "pagePath": "pages/forum/forum",
-        "text": "论坛",
-        "iconPath": "/images/tabs/forum.png",
-        "selectedIconPath": "/images/tabs/forum-active.png"
-      }
-    ]
-  },
-  "subPackages": [
-    {
-      "root": "subpkg",
-      "pages": [
-        "good_detail"
-      ]
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "WX_Shop",
+        "navigationBarBackgroundColor": "#FF888F"
+    },
+    "pages": [
+        "pages/home/home",
+        "pages/cate/cate",
+        "pages/cart/cart",
+        "pages/my/my",
+        "pages/baike/trading/trading",
+        "pages/baike/brewing/brewing",
+        "pages/baike/enchating/enchating",
+        "pages/baike/block/block",
+        "pages/baike/item/item",
+        "pages/baike/mob/mob",
+        "pages/baike/crafting/crafting",
+        "pages/baike/smelting/smelting",
+        "pages/baike/redstone_circuit/redstone_circuit"
+    ],
+    "tabBar": {
+        "selectedColor": "#FF888F",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "static/tab_icons/home.png",
+                "selectedIconPath": "static/tab_icons/home-active.png"
+            },
+            {
+                "pagePath": "pages/cate/cate",
+                "text": "分类",
+                "iconPath": "static/tab_icons/cate.png",
+                "selectedIconPath": "static/tab_icons/cate-active.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "static/tab_icons/cart.png",
+                "selectedIconPath": "static/tab_icons/cart-active.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "static/tab_icons/my.png",
+                "selectedIconPath": "static/tab_icons/my-active.png"
+            }
+        ]
+    },
+    "subPackages": [
+        {
+            "root": "subpkg",
+            "pages": [
+                "goods_detail/goods_detail"
+            ]
+        }
+    ],
+    "usingComponents": {
+        "van-button": "/miniprogram_npm/@vant/weapp/button/index",
+        "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
+        "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index"
     }
-  ],
-  "usingComponents": {
-    "van-button": "/miniprogram_npm/@vant/weapp/button/index",
-    "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
-    "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index"
-  }
 }

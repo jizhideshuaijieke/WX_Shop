@@ -22,7 +22,7 @@ right：不缩放，显示图片右侧部分，左侧可能会被裁剪。 -->
 <!-- 轮播图 -->
 <swiper autoplay="true" interval="3000" duration="1000" circular="true" indicator-dot="true">
     <swiper-item wx:for="{{swiperList}}" wx:key="index">
-        <navigator url="/subpkg/goods_detail/goods_detail?goods_id">
+        <navigator url="/subpkg/goods_detail/goods_detail?goods_id" open-type="navigate">
             <image src="{{item.image_src}}" class="swiperImage"></image>
         </navigator>
     </swiper-item>

@@ -1,4 +1,4 @@
-// subpkg/good_detail.js
+// pages/cate/cate.js
 Page({
 
   /**

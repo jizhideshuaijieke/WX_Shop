@@ -2,6 +2,7 @@ Page({
     data: {
         count: 0,
         colorList: [],
+        colorList1: [], //colorList对应的十六进制
         queryTitleName: {}
     },
     onLoad: function (options) {
@@ -34,6 +35,11 @@ Page({
         }, 500);
         wx.stopPullDownRefresh() //赋值成功就停止下拉的刷新
     },
+    //十进制颜色转十六进制
+    conveyColor(cl) {
+        let hex = cl.toString(16).toUpperCase(); // 将十进制转换为十六进制
+        return hex.length === 1 ? '0' + hex : hex; // 如果长度为1，前面补0
+    },
     //获取随机颜色方法
     getRandomColor() {
         //RGB颜色：[0,255]表示红绿蓝的强度
@@ -42,7 +48,8 @@ Page({
         let b = Math.floor(Math.random() * 256);
         this.setData({
             //加上...是扩展出原数组的所有元素，如果不加就相当于数组嵌套
-            colorList: [...this.data.colorList, `rgb(${r},${g},${b})`]
+            colorList: [...this.data.colorList, `RGB(${r},${g},${b})`],
+            colorList1: [...this.data.colorList1, '#' + this.conveyColor(r) + this.conveyColor(g) + this.conveyColor(b)]
         });
     },
     onReady() {
