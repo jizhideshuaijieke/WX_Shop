@@ -21,10 +21,10 @@ right：不缩放，显示图片右侧部分，左侧可能会被裁剪。-->
 </swiper>
 
 <!-- 分类 -->
-<view wx:for="{{cateList}}" wx:key="index">
-    <navigator url="" open-type="navigate">
-    
-    </navigator>
+<view class="cateContainer">
+    <view wx:for="{{cateList}}" wx:key="index">
+        <image src="{{item.image_src}}" class="cateItems"></image>
+    </view>
 </view>
 <!-- 百科主体内容 -->
 <view class="baikeList">
