@@ -1,8 +1,9 @@
-const myBehaviors = require('../../behaviors/behavior1.js');//
+const myBehaviors = require('../../behaviors/behavior1.js'); //
 Page({
     behaviors: [myBehaviors],
     data: {
-        swiperList: []
+        swiperList: [],
+        cateList: []
     },
     //获取轮播图图片
     getSwiperImages() {
@@ -20,11 +21,27 @@ Page({
                     console.log(res)
                 }
             },
-
+        });
+    },
+    //获取分类数据
+    getCateItems() {
+        wx.request({
+            url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems',
+            method: 'GET',
+            success: (res) => {
+                if (res.statusCode != 200) {
+                    this.showToast()
+                } else {
+                    this.setData({
+                        cateList: res.data.message,
+                    });
+                    console.log(res)
+                }
+            },
         });
     },
     onLoad: function (options) {
-        this.getSwiperImages()
+        this.getSwiperImages(), this.getCateItems()
     },
     onReady() {},
     onShow() {},
