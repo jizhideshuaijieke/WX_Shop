@@ -3,10 +3,11 @@ Page({
     behaviors: [myBehaviors],
     data: {
         swiperList: [],
-        cateList: []
+        cateList: [],
+        floorList: []
     },
     //获取轮播图图片
-    getSwiperImages() {
+    getSwiperItems() {
         wx.request({
             url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
             method: 'GET',
@@ -18,7 +19,7 @@ Page({
                         swiperList: res.data.message,
                         // console.log(res) 不能放在setData内
                     });
-                    console.log(res)
+                    // console.log(res)
                 }
             },
         });
@@ -35,13 +36,42 @@ Page({
                     this.setData({
                         cateList: res.data.message,
                     });
-                    console.log(res)
+                }
+            },
+        });
+    },
+    //分类点击导航
+    // 在微信小程序中，event.currentTarget.dataset.item 用于获取通过 data- 属性传递的自定义数据。具体来说：
+    // event: 这是事件对象，它在事件触发时被传递给事件处理函数。
+    // currentTarget: 表示触发事件的当前组件（比如点击的 <image> 标签）。即使事件被冒泡，currentTarget 依然指向最初绑定事件的组件。
+    // dataset: 小程序自动将所有 data- 开头的属性收集到 dataset 对象中。
+    // item: 表示我们定义的 data-item 的数据值。event.currentTarget.dataset.item 就是将 data-item 传递的内容提取出来。
+    CateNavigator(event) {
+        let item = event.currentTarget.dataset.item;
+        if (item.name == "分类") {
+            wx.switchTab({ //跳转到Tab页面
+                url: '/pages/cate/cate',
+            })
+        }
+    },
+    //获取楼层数据
+    getFloorItems() {
+        wx.request({
+            url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata',
+            method: 'GET',
+            success: (res) => {
+                if (res.statusCode != 200) {
+                    this.showToast()
+                } else {
+                    this.setData({
+                        floorList: res.data.message
+                    });
                 }
             },
         });
     },
     onLoad: function (options) {
-        this.getSwiperImages(), this.getCateItems()
+        this.getSwiperItems(), this.getCateItems(), this.getFloorItems()
     },
     onReady() {},
     onShow() {},

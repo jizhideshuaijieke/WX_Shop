@@ -1,0 +1,5 @@
+module.exports = {
+    stringToInteger: function(width) {
+        return parseInt(width, 10); // 将字符串宽度转换为十进制整数
+    }
+}

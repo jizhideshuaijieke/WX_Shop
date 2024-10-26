@@ -23,45 +23,19 @@ right：不缩放，显示图片右侧部分，左侧可能会被裁剪。-->
 <!-- 分类 -->
 <view class="cateContainer">
     <view wx:for="{{cateList}}" wx:key="index">
-        <image src="{{item.image_src}}" class="cateItems"></image>
+        <image src="{{item.image_src}}" class="cateItems" bind:tap="CateNavigator" data-item="{{item}}"></image>
     </view>
 </view>
-<!-- 百科主体内容 -->
-<view class="baikeList">
-    <navigator class="baike" url="/pages/baike/trading/trading?title=交易" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Emerald.webp" mode="aspectFit" />
-        <text>交易</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/brewing/brewing?title=药水酿造" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Water_Bottle.webp" mode="aspectFit" />
-        <text>药水酿造</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/crafting/crafting?title=合成" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Crafting_Table.png" mode="aspectFit" />
-        <text>合成</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/enchating/enchating?title=附魔" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Enchanting_Table.webp" mode="aspectFit" />
-        <text>附魔</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/item/item?title=物品" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Apple.webp" mode="aspectFit" />
-        <text>物品</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/mob/mob?title=生物" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/White_Sheep.webp" mode="aspectFit" />
-        <text>生物</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/redstone_circuit/redstone_circuit?title=红石电路" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Redstone_Dust.webp" mode="aspectFit" />
-        <text>红石电路</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/smelting/smelting?title=烧炼" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Iron_Ore.png" mode="aspectFit" />
-        <text>烧炼</text>
-    </navigator>
-    <navigator class="baike" url="/pages/baike/block/block?title=方块" open-type="navigate">
-        <image class="baikeimage" src="http://skmdz9yfd.hn-bkt.clouddn.com/images/Grass_Block.png" mode="aspectFit" />
-        <text>方块</text>
-    </navigator>
+
+<!-- 商品楼层 -->
+<wxs module="convey" src="/pages/home/home.wxs" />
+<view class="floorContainer">
+    <view wx:for="{{floorList}}" wx:key="index" wx:for-item="floor">
+        <image src="{{floor.floor_title.image_src}}" mode="widthFix"></image>
+        <view class="productContainer">
+            <view wx:for="{{floor.product_list}}" wx:key="idx" wx:for-item="product">
+                <image src="{{product.image_src}}" style="width:{{ convey.stringToInteger(product.image_width)}}rpx; height:250rpx;" bind:tap="productNavigator" data-items="product"></image>
+            </view>
+        </view>
+    </view>
 </view>
