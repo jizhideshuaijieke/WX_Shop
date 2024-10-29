@@ -34,7 +34,7 @@ right：不缩放，显示图片右侧部分，左侧可能会被裁剪。-->
         <image src="{{floor.floor_title.image_src}}" mode="widthFix"></image>
         <view class="productContainer">
             <view wx:for="{{floor.product_list}}" wx:key="idx" wx:for-item="product">
-                <image src="{{product.image_src}}" style="width:{{ convey.stringToInteger(product.image_width)}}rpx; height:250rpx;" bind:tap="productNavigator" data-items="product"></image>
+                <image src="{{product.image_src}}" style="width:{{ convey.stringToInteger(product.image_width)}}rpx; height:250rpx;" bind:tap="productNavigator" data-items="{{product}}"></image>
             </view>
         </view>
     </view>

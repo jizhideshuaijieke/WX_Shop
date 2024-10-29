@@ -70,6 +70,16 @@ Page({
             },
         });
     },
+    //商品导航
+    productNavigator(event) {
+        let item = event.currentTarget.dataset.items
+        // console.log(item)
+        let s = item.navigator_url.split('?', 2)//将地址的参数部分分割出来
+        // console.log(s[1])
+        wx.navigateTo({
+            url: '/subpkg/goods_list/goods_list' + s[1],
+        })
+    },
     onLoad: function (options) {
         this.getSwiperItems(), this.getCateItems(), this.getFloorItems()
     },
