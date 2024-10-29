@@ -8,16 +8,7 @@
         "pages/home/home",
         "pages/cate/cate",
         "pages/cart/cart",
-        "pages/my/my",
-        "pages/baike/trading/trading",
-        "pages/baike/brewing/brewing",
-        "pages/baike/enchating/enchating",
-        "pages/baike/block/block",
-        "pages/baike/item/item",
-        "pages/baike/mob/mob",
-        "pages/baike/crafting/crafting",
-        "pages/baike/smelting/smelting",
-        "pages/baike/redstone_circuit/redstone_circuit"
+        "pages/my/my"
     ],
     "tabBar": {
         "selectedColor": "#FF888F",
@@ -59,8 +50,7 @@
         }
     ],
     "usingComponents": {
-        "van-button": "/miniprogram_npm/@vant/weapp/button/index",
-        "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
-        "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index"
+        "van-sidebar":"/miniprogram_npm/@vant/weapp/sidebar/index",
+        "van-sidebar-item":"/miniprogram_npm/@vant/weapp/sidebar-item/index"
     }
 }

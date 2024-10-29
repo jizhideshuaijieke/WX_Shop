@@ -1,2 +1,0 @@
-<view>childsay: {{prop}}</view>
-<button bind:tap="emitEvent">Click Me</button>

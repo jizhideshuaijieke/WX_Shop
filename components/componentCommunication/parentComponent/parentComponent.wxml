@@ -1,3 +1,0 @@
-<childComponent prop="{{parentData}}" bind:childEvent="handleChildEvent"  class="test1"/>
-<view>parentsay: {{dataFromChild}}</view>
-

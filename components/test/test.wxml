@@ -1,7 +1,0 @@
-<!--components/test.wxml-->
-<view>Max:{{max}}</view>
-<button bindtap="addMax">按下加一</button>
-<button bindtap="addA">A加一</button>
-<button bindtap="addB">B加一</button>
-<view>a+b->sum</view>
-<view>{{a}}+{{b}}->{{sum}}</view>

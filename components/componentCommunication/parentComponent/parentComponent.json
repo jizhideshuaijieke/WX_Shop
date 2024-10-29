@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "childComponent":"/components/componentCommunication/childComponent/childComponent"
-  }
-}

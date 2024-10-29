@@ -1,9 +1,0 @@
-<!--components/test.wxml-->
-<view>Max:{{max}}</view>
-<van-button type="primary" size="large" bindtap="addMax" color="linear-gradient(to right,#fcb00f, #6ff9f6)">按下加一</van-button>
-<view class="normalSizeBuutonContainer">
-    <van-button class="normalSizeBuuton" bindtap="addA" color="linear-gradient(to right,#fbb00f, #6149f6)">A加一</van-button>
-    <van-button class="normalSizeBuuton" bindtap="addB" color="linear-gradient(to right,#fbb00f, #6149f6)">B加一</van-button>
-</view>
-<view>a+b->sum</view>
-<view>{{a}}+{{b}}->{{sum}}</view>

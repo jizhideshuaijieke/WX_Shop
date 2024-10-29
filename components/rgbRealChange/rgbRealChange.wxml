@@ -1,9 +1,0 @@
-<view style="background-color: {{Color}};" class="rgbShower">R:{{PD_rgb.r}} G:{{PD_rgb.g}} B:{{PD_rgb.b}}</view>
-<view class="rgbOperateContainer">
-    <button bind:tap="rAdd">r+5</button>
-    <button bind:tap="rMinus">r-5</button>
-    <button bind:tap="gAdd">g+5</button>
-    <button bind:tap="gMinus">g-5</button>
-    <button bind:tap="bAdd">b+5</button>
-    <button bind:tap="bMinus">b-5</button>
-</view>
