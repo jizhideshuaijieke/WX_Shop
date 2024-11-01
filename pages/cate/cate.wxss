@@ -1,0 +1,48 @@
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* 设置页面容器的总高度 */
+}
+
+.sideBar {
+    width: 20%;
+    height: 100vh; /* 侧边栏占据整个页面高度 */
+    overflow-y: auto; /* 设置垂直滚动 */
+}
+
+.cate2Container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 80rpx;
+    height: 100vh; /* 侧边栏占据整个页面高度 */
+    overflow-y: auto; /* 设置垂直滚动 */
+}
+
+.cate2Name {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cate3Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brand {
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.cate3Name {
+    text-align: center;
+    font-size: 24rpx;
+}

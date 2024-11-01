@@ -1,72 +1,52 @@
 Page({
     data: {
-        sidebarItems: [{
-                title: "标签名称 1",
-                dot: true
-            },
-            {
-                title: "标签名称 2",
-                badge: "5"
-            },
-            {
-                title: "标签名称 3",
-                disabled: true
-            }
-        ]
+        cateList: [],
+        activeIndex: 1
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
+    //获取分类数据
+    getCateList() {
+        wx.request({
+            url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories',
+            method: 'GET',
+            success: (res) => {
+                if (res.statusCode != 200) {
+                    this.showToast()
+                } else {
+                    this.setData({
+                        cateList: res.data.message
+                    });
+                    // console.log()
+                }
+            },
+        })
+    },
+    //切换侧边栏的索引
+    changeCategory(event){
+       this.setData({
+            activeIndex : event.detail
+        })
+    },
     onLoad(options) {
-
+        this.getCateList()
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
     onReady() {
 
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
     onShow() {
 
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
     onHide() {
 
     },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
     onUnload() {
 
     },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
     onPullDownRefresh() {
 
     },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
     onReachBottom() {
 
     },
-
-    /**
-     * 用户点击右上角分享
-     */
     onShareAppMessage() {
 
     }
