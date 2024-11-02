@@ -1,7 +1,8 @@
 Page({
     data: {
         cateList: [],
-        activeIndex: 1
+        activeIndex: 1,
+        scrollTop: 0, // 滚动条位置
     },
     //获取分类数据
     getCateList() {
@@ -21,9 +22,17 @@ Page({
         })
     },
     //切换侧边栏的索引
-    changeCategory(event){
-       this.setData({
-            activeIndex : event.detail
+    changeCategory(event) {
+        this.setData({
+            activeIndex: event.detail, // 更新选中的分类
+            scrollTop: 0, // 重置滚动条位置
+        })
+    },
+    //导航到商品详情页
+    naviToBrand(event) {
+        let brand = event.currentTarget.dataset.brand;
+        wx.navigateTo({
+            url: '/subpkg/goods_list/goods_list?cid=' + brand.cat_name
         })
     },
     onLoad(options) {

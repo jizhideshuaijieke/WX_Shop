@@ -6,17 +6,17 @@
     </van-sidebar>
 
     <!-- 根据activeIndex动态展示 -->
-    <view class="cate2Container">
+    <scroll-view class="cate2Container" scroll-y scroll-top="{{scrollTop}}">
         <view wx:for="{{cateList[activeIndex].children}}" wx:key="index" wx:for-item="cate2">
             <view class="cate2Name">/{{cate2.cat_name}}/</view>
             <view class="cate3Container">
                 <view wx:for="{{cate2.children}}" wx:key="idx" wx:for-item="cate3">
                     <view class="brand">
-                        <image src="{{cate3.cat_icon}}"></image>
+                        <image src="{{cate3.cat_icon}}" mode="aspectFit"></image>
                         <view class="cate3Name">{{cate3.cat_name}}</view>
                     </view>
                 </view>
             </view>
         </view>
-    </view>
+    </scroll-view>
 </view>
