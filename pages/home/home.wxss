@@ -54,13 +54,13 @@
     align-items: center;
 }
 
-.floorContainer{
+.floorContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.productContainer{
+.productContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

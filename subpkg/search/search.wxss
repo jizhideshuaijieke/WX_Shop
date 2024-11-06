@@ -1,0 +1,16 @@
+.stayTop {
+    /*吸顶*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.historyContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productDetail {
+    border: 1rpx solid #b8afaf;
+}

@@ -4,6 +4,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "search",
+          "pathName": "subpkg/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "cate",
           "pathName": "pages/cate/cate",
           "query": "",

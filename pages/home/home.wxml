@@ -1,3 +1,4 @@
+<van-search value="{{ value }}" placeholder="请输入商品名称" background="#EEEEEE" shape="round " bind:search="onSearch" bind:cancel="onCancel" bind:tap="goToSearch"/>
 <!-- 在微信小程序中，<image> 组件的 mode 属性用于控制图片的显示方式。常见的 mode 格式包括：
 scaleToFill：不保持纵横比，拉伸图片到填满整个容器
 aspectFit：保持纵横比，缩放图片，使其长边完全显示，短边可能会留白

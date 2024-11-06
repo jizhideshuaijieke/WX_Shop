@@ -34,6 +34,7 @@ Page({
         wx.navigateTo({
             url: '/subpkg/goods_list/goods_list?cid=' + brand.cat_name
         })
+        // console.log(brand.cat_name)
     },
     onLoad(options) {
         this.getCateList()

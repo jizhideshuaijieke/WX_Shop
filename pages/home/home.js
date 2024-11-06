@@ -1,10 +1,15 @@
-const myBehaviors = require('../../behaviors/behavior1.js'); //
+const myBehaviors = require('../../behaviors/behavior1.js');
 Page({
     behaviors: [myBehaviors],
     data: {
         swiperList: [],
         cateList: [],
         floorList: []
+    },
+    goToSearch(){
+        wx.navigateTo({
+          url: '/subpkg/search/search',
+        })
     },
     //获取轮播图图片
     getSwiperItems() {
@@ -19,7 +24,6 @@ Page({
                         swiperList: res.data.message,
                         // console.log(res) 不能放在setData内
                     });
-                    // console.log(res)
                 }
             },
         });
@@ -73,9 +77,7 @@ Page({
     //商品导航
     productNavigator(event) {
         let item = event.currentTarget.dataset.items
-        // console.log(item)
         let s = item.navigator_url.split('?', 2)//将地址的参数部分分割出来
-        // console.log(s[1])
         wx.navigateTo({
             url: '/subpkg/goods_list/goods_list' + s[1],
         })

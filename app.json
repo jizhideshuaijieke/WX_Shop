@@ -2,7 +2,7 @@
     "window": {
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "WX_Shop",
-        "navigationBarBackgroundColor": "#FF888F"
+        "navigationBarBackgroundColor": "#DD6655"
     },
     "pages": [
         "pages/home/home",
@@ -45,12 +45,14 @@
             "pages": [
                 "goods_detail/goods_detail",
                 "goods_list/goods_list",
-                "search/goods_list"
+                "search/search"
             ]
         }
     ],
     "usingComponents": {
-        "van-sidebar":"/miniprogram_npm/@vant/weapp/sidebar/index",
-        "van-sidebar-item":"/miniprogram_npm/@vant/weapp/sidebar-item/index"        
+        "van-sidebar": "/miniprogram_npm/@vant/weapp/sidebar/index",
+        "van-sidebar-item": "/miniprogram_npm/@vant/weapp/sidebar-item/index",
+        "van-search": "/miniprogram_npm/@vant/weapp/search/index",
+        "van-tag": "/miniprogram_npm/@vant/weapp/tag/index"
     }
 }

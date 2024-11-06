@@ -11,7 +11,7 @@
             <view class="cate2Name">/{{cate2.cat_name}}/</view>
             <view class="cate3Container">
                 <view wx:for="{{cate2.children}}" wx:key="idx" wx:for-item="cate3">
-                    <view class="brand">
+                    <view class="brand" bind:tap="naviToBrand" data-brand="{{cate3}}">
                         <image src="{{cate3.cat_icon}}" mode="aspectFit"></image>
                         <view class="cate3Name">{{cate3.cat_name}}</view>
                     </view>
