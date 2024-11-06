@@ -1,0 +1,67 @@
+/* 父子元素之间的相同属性不会继承 */
+.swiperImage {
+    width: 100%;
+}
+
+.cateContainer {
+    display: flex;
+    /* 让子元素在容器中均匀分布，每个子元素之间的间距相等，并且容器的两边也有一定的空白 */
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.cateItems {
+    width: 128rpx;
+    height: 140rpx;
+}
+
+.baikeList {
+    display: flex;
+    /*设置元素的显示类型*/
+    flex-direction: row;
+    /*设置Flex容器中子元素的排列方向*/
+    flex-wrap: wrap;
+    /*设置Flex容器是否换行*/
+    border-left: 1rpx solid #228B22;
+    border-top: 1rpx solid #228B22;
+}
+
+.baike {
+    width: 33.33%;
+    height: 250rpx;
+
+    display: flex;
+    flex-direction: column;
+    /*设置容器中元素垂直排列*/
+    align-items: center;
+    /*设置Flex容器中子元素在横轴上的对齐方式*/
+    justify-content: center;
+    /*设置Flex容器中子元素在纵轴上的对齐方式 */
+
+    border-right: 1rpx solid #0e3a0e;
+    border-bottom: 1rpx solid #0e3a0e;
+    box-sizing: border-box;
+    /*content-box（默认值）元素的宽度和高度只包括内容区域，不包括内边距（padding）和边框（border)border-box 元素的宽度和高度包括内容区域、内边距和边框。*/
+
+    font-size: 40rpx;
+    font-style: normal;
+    color: #929191;
+}
+
+.baikeimage {
+    width: 150rpx;
+    justify-content: center;
+    align-items: center;
+}
+
+.floorContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,42 @@
+<van-search value="{{ value }}" placeholder="请输入商品名称" background="#EEEEEE" shape="round " bind:search="onSearch" bind:cancel="onCancel" bind:tap="goToSearch"/>
+<!-- 在微信小程序中，<image> 组件的 mode 属性用于控制图片的显示方式。常见的 mode 格式包括：
+scaleToFill：不保持纵横比，拉伸图片到填满整个容器
+aspectFit：保持纵横比，缩放图片，使其长边完全显示，短边可能会留白
+aspectFill：保持纵横比，缩放图片，图片的短边会完全填满容器，可能会被裁剪    
+widthFix：保持纵横比，宽度不变，高度自适应
+heightFix：保持纵横比，高度不变，宽度自适应
+top：不缩放，显示图片顶部部分，底部可能会被裁剪
+bottom：不缩放，显示图片底部部分，上部可能会被裁剪
+center：不缩放，显示图片中心部分，四周可能会被裁剪
+left：不缩放，显示图片左侧部分，右侧可能会被裁剪
+right：不缩放，显示图片右侧部分，左侧可能会被裁剪。-->
+<!-- 轮播图 -->
+<swiper autoplay="true" interval="3000" duration="1000" circular="true" indicator-dots="true">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <!-- 使用反引号 ` 来创建模板字符串，允许在字符串中直接插入变量。
+        ${item.goods_id} 是 JavaScript 的插值语法，将 item.goods_id 的值嵌入到字符串中。 -->
+        <navigator url="`/subpkg/goods_detail/goods_detail?goods_id=${item.goods_id}`" open-type="navigate">
+            <image src="{{item.image_src}}" class="swiperImage"></image>
+        </navigator>
+    </swiper-item>
+</swiper>
+
+<!-- 分类 -->
+<view class="cateContainer">
+    <view wx:for="{{cateList}}" wx:key="index">
+        <image src="{{item.image_src}}" class="cateItems" bind:tap="CateNavigator" data-item="{{item}}"></image>
+    </view>
+</view>
+
+<!-- 商品楼层 -->
+<wxs module="convey" src="/pages/home/home.wxs" />
+<view class="floorContainer">
+    <view wx:for="{{floorList}}" wx:key="index" wx:for-item="floor">
+        <image src="{{floor.floor_title.image_src}}" mode="widthFix"></image>
+        <view class="productContainer">
+            <view wx:for="{{floor.product_list}}" wx:key="idx" wx:for-item="product">
+                <image src="{{product.image_src}}" style="width:{{ convey.stringToInteger(product.image_width)}}rpx; height:250rpx;" bind:tap="productNavigator" data-items="{{product}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

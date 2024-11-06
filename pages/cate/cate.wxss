@@ -1,0 +1,51 @@
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    width: 20%;
+    height: 100vh;
+    /* 侧边栏占据整个页面高度 */
+    overflow-y: auto;
+    /* overflow-y 属性用于控制垂直方向的内容溢出情况。 */
+    /* auto 表示当内容超过容器的高度时，自动生成一个 垂直滚动条，否则不会显示滚动条。 */
+}
+
+.cate2Container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /*显示在屏幕中的百分比*/
+    overflow-y: auto;
+}
+
+.cate2Name {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cate3Container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80rpx;
+}
+
+.brand {
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.cate3Name {
+    text-align: center;
+    font-size: 24rpx;
+}
