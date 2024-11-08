@@ -15,7 +15,7 @@ Page({
             searchHistory: this.data.searchHistory,
         });
     },
-    onSearch() {//搜索触发
+    onSearch() { //搜索触发
         this.setData({
             keyWord: this.data.tempWord
         })
@@ -23,8 +23,11 @@ Page({
     },
 
     loadToHistory() {
+        let historySet = new Set(this.data.searchHistory);
+        if (historySet.has(this.data.keyWord)) return;
         this.setData({
-            searchHistory: [...this.data.searchHistory, this.data.keyWord]
+            searchHistory: this.data.searchHistory.reverse(), //第一次反转吗，转为顺序
+            searchHistory: [...this.data.searchHistory, this.data.keyWord].reverse() //加入元素，第二次反转(新加入的排在前面)
         });
     },
     inputChange(event) { //输入变化监控函数
