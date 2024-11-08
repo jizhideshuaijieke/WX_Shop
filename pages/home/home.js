@@ -77,9 +77,9 @@ Page({
     //商品导航
     productNavigator(event) {
         let item = event.currentTarget.dataset.items
-        let s = item.navigator_url.split('?', 2)//将地址的参数部分分割出来
+        let s = item.navigator_url.split('?', 2)//将地址中参数的参数(query)分割
         wx.navigateTo({
-            url: '/subpkg/goods_list/goods_list' + s[1],
+            url: '/subpkg/goods_list/goods_list?' + s[1],
         })
     },
     onLoad: function (options) {

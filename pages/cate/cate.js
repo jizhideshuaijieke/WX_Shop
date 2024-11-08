@@ -1,7 +1,7 @@
 Page({
     data: {
         cateList: [],
-        activeIndex: 1,
+        activeIndex: 0,
         scrollTop: 0, // 滚动条位置
     },
     //获取分类数据
@@ -16,7 +16,6 @@ Page({
                     this.setData({
                         cateList: res.data.message
                     });
-                    // console.log()
                 }
             },
         })
@@ -34,7 +33,6 @@ Page({
         wx.navigateTo({
             url: '/subpkg/goods_list/goods_list?cid=' + brand.cat_name
         })
-        // console.log(brand.cat_name)
     },
     onLoad(options) {
         this.getCateList()

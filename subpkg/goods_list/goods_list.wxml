@@ -1,2 +1,15 @@
-<!--subpkg/goods_list/goods_list.wxml-->
-<text>subpkg/goods_list/goods_list.wxml</text>
+<view class="goodsContainer">
+	<scroll-view wx:for="{{goodsList}}" wx:key="index" wx:for-item="goods">
+		<veiw class="goods">
+			<view class="goodsLeft">
+				<image src="{{goods.goods_small_logo||defaultPic}}" class="goodsImage"></image>
+			</view>
+			<view class="goodsRight">
+				<view class="goodsName">{{goods.goods_name}}</view>
+				<view class="goodsInfor">
+					<view class="goodsPrice">￥{{goods.goods_price}}</view>
+				</view>
+			</view>
+		</veiw>
+	</scroll-view>
+</view>

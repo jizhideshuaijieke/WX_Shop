@@ -58,7 +58,7 @@ Page({
             method: 'GET',
             data: {
                 query: this.data.tempWord
-            }, // 将查询参数放在对象中
+            }, // 将要查询参数放在对象中
             success: (res) => {
                 if (res.data.meta.status != 200) {
                     this.showToast();
