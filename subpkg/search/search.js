@@ -14,6 +14,7 @@ Page({
         this.setData({
             searchHistory: this.data.searchHistory,
         });
+        this.saveSearchHistory()
     },
     onSearch() { //搜索触发
         this.setData({
@@ -29,6 +30,7 @@ Page({
             searchHistory: this.data.searchHistory.reverse(), //第一次反转吗，转为顺序
             searchHistory: [...this.data.searchHistory, this.data.keyWord].reverse() //加入元素，第二次反转(新加入的排在前面)
         });
+        this.saveSearchHistory()
     },
     inputChange(event) { //输入变化监控函数
         let value = event.detail;
@@ -81,8 +83,26 @@ Page({
             url: '/subpkg/goods_detail/goods_detail?goods_id=' + brand.goods_id
         })
     },
+    saveSearchHistory() {
+        wx.setStorage({
+            key: "SearchHistory",
+            data: {
+                list: this.data.searchHistory
+            }
+        });
+    },
+    getSearchHistory() {
+        wx.getStorage({
+            key: "SearchHistory",
+            success: (res) => {
+                this.setData({
+                    searchHistory: res.data.list
+                })
+            }
+        })
+    },
     onLoad(options) {
-
+        this.getSearchHistory()
     },
     onReady() {
 

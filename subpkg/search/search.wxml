@@ -5,14 +5,14 @@
     <van-tag type="primary" size="large" color="#EEEEEE" text-color="#000000">搜索历史</van-tag>
     <view class="historyContainer">
         <view wx:for="{{searchHistory}}" wx:key="index">
-            <van-tag closeable size="large" type="primary" round bind:close="deleteHistory" data-idx="{{index}}" color="#EEEEEE" text-color="#000000">{{item}}</van-tag>
+            <van-tag closeable size="large" type="primary" round bind:close="deleteHistory" bind:tap="naviToSuggest" data-brand="{{item}}" data-idx="{{index}}" color="#EEEEEE" text-color="#000000">{{item}}</van-tag>
         </view>
     </view>
 </view>
 <!-- 搜索建议 -->
 <scroll-view scroll-y scroll-top="{{scrollTop}}">
     <view wx:for="{{searchResults}}" wx:key="index">
-        <view bind:tap="naviToBrand" data-brand="item" class="productDetail">{{item.goods_name}}</view>
+        <view bind:tap="naviToBrand" data-brand="{{item}}" class="productDetail">{{item.goods_name}}</view>
     </view>
     <view style="height: 200rpx;"></view><!-- 占位 -->
 </scroll-view>
