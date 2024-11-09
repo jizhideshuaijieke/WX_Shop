@@ -10,7 +10,7 @@
 }
 
 .goodsLeft {
-	margin-right: 5px;
+	margin-right: 10rpx;
 }
 
 .goodsImage {
@@ -30,6 +30,6 @@
 }
 
 .goodsPrice {
-	font-size: 16px;
+	font-size: 32rpx;
 	color: #c00000;
 }

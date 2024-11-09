@@ -1,0 +1,6 @@
+module.exports = {
+	// 在 wxs 中，函数必须明确使用 function 声明，也不能使用=》箭头函数
+	toFixed: function(num) {
+		return Number(num).toFixed(2);
+	}
+}

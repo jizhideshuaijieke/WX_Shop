@@ -1,15 +1,17 @@
+<wxs module="priceFormat" src="/subpkg/goods_list/format.wxs"/>
 <view class="goodsContainer">
-	<scroll-view wx:for="{{goodsList}}" wx:key="index" wx:for-item="goods">
-		<veiw class="goods">
-			<view class="goodsLeft">
-				<image src="{{goods.goods_small_logo||defaultPic}}" class="goodsImage"></image>
-			</view>
-			<view class="goodsRight">
-				<view class="goodsName">{{goods.goods_name}}</view>
-				<view class="goodsInfor">
-					<view class="goodsPrice">￥{{goods.goods_price}}</view>
-				</view>
-			</view>
-		</veiw>
-	</scroll-view>
+  <scroll-view wx:for="{{goodsList}}" wx:key="index" wx:for-item="goods">
+    <view class="goods" bind:tap="naviToDetail" data-brand="{{goods}}">
+      <view class="goodsLeft">
+        <image src="{{goods.goods_small_logo || defaultPic}}" class="goodsImage"></image>
+      </view>
+      <view class="goodsRight">
+        <view class="goodsName">{{goods.goods_name}}</view>
+        <view class="goodsInfor">
+          <!-- 使用 wxs 格式化显示商品价格 -->
+          <view class="goodsPrice">￥{{priceFormat.toFixed(goods.goods_price)}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 </view>

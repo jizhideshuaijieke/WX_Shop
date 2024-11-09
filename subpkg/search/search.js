@@ -21,8 +21,16 @@ Page({
             keyWord: this.data.tempWord
         })
         this.loadToHistory()
+        wx.navigateTo({
+            url: '/subpkg/goods_list/goods_list?query=' + this.data.keyWord,
+        })
     },
-
+    naviByHistory(event) {
+        this.setData({
+            tempWord: event.currentTarget.dataset.brand
+        })
+        this.onSearch();
+    },
     loadToHistory() {
         let historySet = new Set(this.data.searchHistory);
         if (historySet.has(this.data.keyWord)) return;
