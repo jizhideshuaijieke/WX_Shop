@@ -8,13 +8,8 @@ Page({
         searchResults: [], //搜索建议列表
         searchHistory: [], //搜索历史列表
     },
-    deleteHistory(event) {
-        let index = event.currentTarget.dataset.idx;
-        this.data.searchHistory.splice(index, 1);
-        this.setData({
-            searchHistory: this.data.searchHistory,
-        });
-        this.saveSearchHistory()
+    onLoad(options) {
+        this.getSearchHistory()
     },
     onSearch() { //搜索触发
         this.setData({
@@ -24,6 +19,14 @@ Page({
         wx.navigateTo({
             url: '/subpkg/goods_list/goods_list?query=' + this.data.keyWord,
         })
+    },
+    deleteHistory(event) {
+        let index = event.currentTarget.dataset.idx;
+        this.data.searchHistory.splice(index, 1);
+        this.setData({
+            searchHistory: this.data.searchHistory,
+        });
+        this.saveSearchHistory()
     },
     naviByHistory(event) {
         this.setData({
@@ -109,28 +112,4 @@ Page({
             }
         })
     },
-    onLoad(options) {
-        this.getSearchHistory()
-    },
-    onReady() {
-
-    },
-    onShow() {
-
-    },
-    onHide() {
-
-    },
-    onUnload() {
-
-    },
-    onPullDownRefresh() {
-
-    },
-    onReachBottom() {
-
-    },
-    onShareAppMessage() {
-
-    }
 })

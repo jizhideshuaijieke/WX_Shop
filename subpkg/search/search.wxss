@@ -5,6 +5,12 @@
     width: 100%;
 }
 
+.historyItem {
+    display: flex;
+    flex-direction: row;
+    margin-right: 16rpx;
+}
+
 .historyContainer {
     display: flex;
     flex-direction: row;

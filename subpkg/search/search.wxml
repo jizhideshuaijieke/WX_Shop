@@ -5,7 +5,10 @@
     <van-tag type="primary" size="large" color="#EEEEEE" text-color="#000000">搜索历史</van-tag>
     <view class="historyContainer">
         <view wx:for="{{searchHistory}}" wx:key="index">
-            <van-tag closeable size="large" type="primary" round bind:close="deleteHistory" bind:tap="naviByHistory" data-brand="{{item}}" data-idx="{{index}}" color="#EEEEEE" text-color="#000000">{{item}}</van-tag>
+            <view class="historyItem">
+                <van-tag size="large" type="primary" round bind:tap="naviByHistory" data-brand="{{item}}" color="#EEEEEE" text-color="#000000">{{item}}</van-tag>
+                <van-icon name="close" bind:tap="deleteHistory" data-idx="{{index}}"></van-icon>
+            </view>
         </view>
     </view>
 </view>
