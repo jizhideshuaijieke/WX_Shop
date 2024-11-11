@@ -72,7 +72,6 @@ Page({
             goodsList: [...this.data.goodsList, ...res.data.message.goods],
             amount: res.data.message.total
           })
-          console.log(this.data.goodsList)
           this.data.isloading = false;
 
           // cb && cb(); 是一种常见的 JavaScript 写法， 用来安全地调用可选的回调函数 cb。 具体来说， 这行代码的作用是：

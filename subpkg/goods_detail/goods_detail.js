@@ -1,66 +1,41 @@
-// subpkg/goods_detail/goods_detail.js
+const myBehaviors = require('../../behaviors/behavior1.js');
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  behaviors: [myBehaviors],
   data: {
-
+    goodsInfo: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
-
+    let goodsId = options.goods_id;
+    this.getGoodsDetails(goodsId);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  getGoodsDetails(cid) {
+    // console.log(cid)
+    wx.request({
+      url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/detail',
+      method: 'GET',
+      data: {
+        goods_id: cid
+      },
+      success: (res) => {
+        if (res.data.meta.status != 200) {
+          this.showToast();
+          return;
+        } else {
+          this.setData({
+            goodsInfo: res.data.message
+          })
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  preview(event) {
+    const index = event.currentTarget.dataset.idx;
+    // 调用 wx.previewImage 方法预览图片
+    wx.previewImage({
+      // 预览时，默认显示图片的索引
+      current: index,
+      // 所有图片的 URL 地址数组
+      urls: this.data.goodsInfo.pics.map(x => x.pics_big) // 将图片地址映射成数组,箭头函数简略了函数体
+    });
   }
 })

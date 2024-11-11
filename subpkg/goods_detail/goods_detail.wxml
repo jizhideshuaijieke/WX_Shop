@@ -1,2 +1,18 @@
-<!--subpkg/goods_detail/goods_detail.wxml-->
-<text>subpkg/goods_detail/goods_detail.wxml</text>
+<!-- 商品轮播图 -->
+<swiper indicator-color="true" autoplay="true" interval="2000" duration="1000" circular="true">
+	<swiper-item wx:for="{{goodsInfo.pics}}" wx:key="index" wx:for-item="item" class="productContainer">
+		<image src="{{item.pics_big}}" class="productImage" bind:tap="preview" data-idx="{{index}}"></image>
+	</swiper-item>
+</swiper>
+<!-- 商品信息区域 -->
+<view class="goods-info-box">
+	<view class="price">￥{{goodsInfo.goods_price}}</view>
+	<view class="goods-info-body">
+		<view class="goods-name">{{goodsInfo.goods_name}}</view>
+		<view class="favi">
+			<van-icon name="star"/>
+			<text>收藏</text>
+		</view>
+	</view>
+	<view class="transportCost">快递：免运费</view>
+</view>

@@ -3,6 +3,7 @@
 <!-- 搜索历史 -->
 <view wx:if="{{tempWord==''}}">
     <van-tag type="primary" size="large" color="#EEEEEE" text-color="#000000">搜索历史</van-tag>
+    <view style="height: 20rpx;"/>
     <view class="historyContainer">
         <view wx:for="{{searchHistory}}" wx:key="index">
             <view class="historyItem">
