@@ -1,45 +1,46 @@
-.productImage{
-	height: 750rpx;
-	width: 100%;
+.productImage {
+    height: 600rpx;
+    width: 100%;
 }
-.productContainer{
-	height: 750rpx;
+
+.productContainer {
+    height: 600rpx;
 }
 
 .goods-info-box {
-  padding: 20rpx; 
-  padding-right: 0;
+    padding: 20rpx;
+    padding-right: 0;
 }
 
 .price {
-  color: #c00000;
-  font-size: 36rpx;
-  margin: 20rpx 0; 
+    color: #c00000;
+    font-size: 36rpx;
+    margin: 20rpx 0;
 }
 
 .goods-info-body {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .goods-name {
-  font-size: 26rpx; 
-  padding-right: 20rpx;
+    font-size: 26rpx;
+    padding-right: 20rpx;
 }
 
 .favi {
-  width: 240rpx;
-  font-size: 24rpx; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-left: 1px solid #efefef;
-  color: gray;
+    width: 240rpx;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #efefef;
+    color: gray;
 }
 
 .transportCost {
-  margin: 20rpx 0; 
-  font-size: 24rpx;
-  color: gray;
+    margin: 20rpx 0;
+    font-size: 24rpx;
+    color: gray;
 }

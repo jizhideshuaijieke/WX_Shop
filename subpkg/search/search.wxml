@@ -3,7 +3,7 @@
 <!-- 搜索历史 -->
 <view wx:if="{{tempWord==''}}">
     <van-tag type="primary" size="large" color="#EEEEEE" text-color="#000000">搜索历史</van-tag>
-    <view style="height: 20rpx;"/>
+    <view style="height: 20rpx;" />
     <view class="historyContainer">
         <view wx:for="{{searchHistory}}" wx:key="index">
             <view class="historyItem">
@@ -14,9 +14,11 @@
     </view>
 </view>
 <!-- 搜索建议 -->
-<scroll-view scroll-y scroll-top="{{scrollTop}}">
-    <view wx:for="{{searchResults}}" wx:key="index">
-        <view bind:tap="naviToBrand" data-brand="{{item}}" class="productDetail">{{item.goods_name}}</view>
-    </view>
-    <view style="height: 200rpx;"></view><!-- 占位 -->
-</scroll-view>
+<view wx:if="{{tempWord}}">
+    <scroll-view scroll-y scroll-top="{{scrollTop}}">
+        <view wx:for="{{searchResults}}" wx:key="index">
+            <view bind:tap="naviToBrand" data-brand="{{item}}" class="productDetail">{{item.goods_name}}</view>
+        </view>
+        <view style="height: 200rpx;"></view><!-- 占位 -->
+    </scroll-view>
+</view>

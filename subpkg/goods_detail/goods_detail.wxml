@@ -1,6 +1,6 @@
 <!-- 商品轮播图 -->
-<swiper indicator-color="true" autoplay="true" interval="2000" duration="1000" circular="true">
-	<swiper-item wx:for="{{goodsInfo.pics}}" wx:key="index" wx:for-item="item" class="productContainer">
+<swiper class="productContainer" indicator-color="true" autoplay="true" interval="2000" duration="1000" circular="true">
+	<swiper-item wx:for="{{goodsInfo.pics}}" wx:key="index" wx:for-item="item">
 		<image src="{{item.pics_big}}" class="productImage" bind:tap="preview" data-idx="{{index}}"></image>
 	</swiper-item>
 </swiper>
