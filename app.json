@@ -54,6 +54,9 @@
         "van-sidebar-item": "/miniprogram_npm/@vant/weapp/sidebar-item/index",
         "van-search": "/miniprogram_npm/@vant/weapp/search/index",
         "van-tag": "/miniprogram_npm/@vant/weapp/tag/index",
-        "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
+        "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+        "van-buy": "/miniprogram_npm/@vant/weapp/goods-action/index",
+        "van-buy-icon": "/miniprogram_npm/@vant/weapp/goods-action-icon",
+        "van-buy-button": "/miniprogram_npm/@vant/weapp/goods-action-button"
     }
 }

@@ -1,10 +1,10 @@
 .productImage {
-    height: 600rpx;
+    height: 800rpx;
     width: 100%;
 }
 
 .productContainer {
-    height: 600rpx;
+    height: 800rpx;
 }
 
 .goods-info-box {

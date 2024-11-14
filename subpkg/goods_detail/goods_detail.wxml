@@ -1,18 +1,28 @@
 <!-- 商品轮播图 -->
 <swiper class="productContainer" indicator-color="true" autoplay="true" interval="2000" duration="1000" circular="true">
-	<swiper-item wx:for="{{goodsInfo.pics}}" wx:key="index" wx:for-item="item">
-		<image src="{{item.pics_big}}" class="productImage" bind:tap="preview" data-idx="{{index}}"></image>
-	</swiper-item>
+    <swiper-item wx:for="{{goodsInfo.pics}}" wx:key="index" wx:for-item="item">
+        <image src="{{item.pics_big}}" class="productImage" bind:tap="preview" data-idx="{{index}}"></image>
+    </swiper-item>
 </swiper>
 <!-- 商品信息区域 -->
 <view class="goods-info-box">
-	<view class="price">￥{{goodsInfo.goods_price}}</view>
-	<view class="goods-info-body">
-		<view class="goods-name">{{goodsInfo.goods_name}}</view>
-		<view class="favi">
-			<van-icon name="star"/>
-			<text>收藏</text>
-		</view>
-	</view>
-	<view class="transportCost">快递：免运费</view>
+    <view class="price">￥{{goodsInfo.goods_price}}</view>
+    <view class="goods-info-body">
+        <view class="goods-name">{{goodsInfo.goods_name}}</view>
+        <view class="favi">
+            <van-icon name="star" />
+            <text>收藏</text>
+        </view>
+    </view>
+    <view class="transportCost">快递：免运费</view>
 </view>
+<!-- 根据html渲染 -->
+<rich-text nodes="{{goodsInfo.goods_introduce}}"></rich-text>
+
+<!-- 购物车导航 -->
+<van-buy goods-action-height="800rpx">
+    <van-buy-icon icon="shop-o" text="购物车" bind:tap="naviToSp" data-origin="购物车"/>
+    <van-buy-icon icon="shop-o" text="店铺" data-origin="店铺"/>
+    <van-buy-button color="#FF8877" type="warning" text="加入购物车" />
+    <van-buy-button color="#DD6655" type="danger" text="立即购买" />
+</van-buy>
