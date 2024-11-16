@@ -1,2 +1,24 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="page">
+	<!-- 滚动区域 -->
+	<scroll-view class="cartItemContainer" scroll-y>
+		<view wx:for="{{cart}}" wx:key="index" wx:for-item="item">
+			<van-swipe-cell right-width="{{65}}">
+				<view slot="right" class="deleteItem" bind:tap="deleteCartItem" data-idx="{{index}}">删除</view>
+				<view class="Item">
+					<van-checkbox value="{{selectedItem[index]}}" bind:change="changeStatu" data-idx="{{index}}" checked-color="#000000" />
+					<image src="{{item.goods_small_logo}}" class="itemImage" />
+					<view class="itemInfo">
+						<view class="itemName">{{item.goods_name}}</view>
+						<view class="itemPrice">￥{{item.goods_price}}</view>
+					</view>
+				</view>
+			</van-swipe-cell>
+		</view>
+	</scroll-view>
+
+	<!-- 总费用栏 -->
+	<view class="cartCount">
+		<view class="cartCountDesription">已选择{{selectedItemCount}}件商品</view>
+		<view class="cartCountCost">￥{{selectedTotalCost}}</view>
+	</view>
+</view>

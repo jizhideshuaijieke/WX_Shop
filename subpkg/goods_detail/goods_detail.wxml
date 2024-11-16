@@ -21,8 +21,8 @@
 
 <!-- 购物车导航 -->
 <van-buy goods-action-height="800rpx">
-    <van-buy-icon icon="shop-o" text="购物车" bind:tap="naviToSp" data-origin="购物车"/>
-    <van-buy-icon icon="shop-o" text="店铺" data-origin="店铺"/>
-    <van-buy-button color="#FF8877" type="warning" text="加入购物车" />
+    <van-buy-icon icon="shop-o" text="购物车" bind:tap="naviToSp" data-origin="购物车" />
+    <van-buy-icon icon="shop-o" text="店铺" data-origin="店铺" />
+    <van-buy-button color="#FF8877" type="warning" bind:tap="addToCart" text="加入购物车" />
     <van-buy-button color="#DD6655" type="danger" text="立即购买" />
 </van-buy>

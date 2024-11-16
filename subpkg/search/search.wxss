@@ -3,6 +3,9 @@
     position: sticky;
     top: 0;
     width: 100%;
+    /* 组件堆叠层级，数字越大显示等级越高 */
+    /* 加上这句避免了被滚动组件覆盖或者显示为半透明的情况 */
+    z-index: 999;
 }
 
 .historyItem {

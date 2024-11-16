@@ -36,26 +36,5 @@ Page({
     },
     onLoad(options) {
         this.getCateList()
-    },
-    onReady() {
-
-    },
-    onShow() {
-
-    },
-    onHide() {
-
-    },
-    onUnload() {
-
-    },
-    onPullDownRefresh() {
-
-    },
-    onReachBottom() {
-
-    },
-    onShareAppMessage() {
-
     }
 })
