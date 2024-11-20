@@ -42,6 +42,12 @@ Page({
     this.setBadge()
     app.saveCart()
   },
+  checkOut(){
+    // console.log("?")
+    wx.navigateTo({
+      url: '/subpkg/myaddress/myaddress'
+    })
+  },
   setBadge() {
     const total = this.data.cart.reduce((sum, item) => sum + item.goods_count, 0);
     wx.setTabBarBadge({

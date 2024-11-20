@@ -1,65 +1,71 @@
 {
-    "window": {
-        "navigationBarTextStyle": "white",
-        "navigationBarTitleText": "WX_Shop",
-        "navigationBarBackgroundColor": "#DD6655"
-    },
-    "pages": [
-        "pages/home/home",
-        "pages/cate/cate",
-        "pages/cart/cart",
-        "pages/my/my"
-    ],
-    "tabBar": {
-        "selectedColor": "#FF888F",
-        "list": [
-            {
-                "pagePath": "pages/home/home",
-                "text": "首页",
-                "iconPath": "static/tab_icons/home.png",
-                "selectedIconPath": "static/tab_icons/home-active.png"
-            },
-            {
-                "pagePath": "pages/cate/cate",
-                "text": "分类",
-                "iconPath": "static/tab_icons/cate.png",
-                "selectedIconPath": "static/tab_icons/cate-active.png"
-            },
-            {
-                "pagePath": "pages/cart/cart",
-                "text": "购物车",
-                "iconPath": "static/tab_icons/cart.png",
-                "selectedIconPath": "static/tab_icons/cart-active.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "text": "我的",
-                "iconPath": "static/tab_icons/my.png",
-                "selectedIconPath": "static/tab_icons/my-active.png"
-            }
-        ]
-    },
-    "subPackages": [
-        {
-            "root": "subpkg",
-            "pages": [
-                "goods_detail/goods_detail",
-                "goods_list/goods_list",
-                "search/search"
-            ]
-        }
-    ],
-    "usingComponents": {
-        "van-sidebar": "/miniprogram_npm/@vant/weapp/sidebar/index",
-        "van-sidebar-item": "/miniprogram_npm/@vant/weapp/sidebar-item/index",
-        "van-search": "/miniprogram_npm/@vant/weapp/search/index",
-        "van-tag": "/miniprogram_npm/@vant/weapp/tag/index",
-        "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
-        "van-buy": "/miniprogram_npm/@vant/weapp/goods-action/index",
-        "van-buy-icon": "/miniprogram_npm/@vant/weapp/goods-action-icon/index",
-        "van-buy-button": "/miniprogram_npm/@vant/weapp/goods-action-button/index",
-        "van-swipe-cell": "/miniprogram_npm/@vant/weapp/swipe-cell/index",
-        "van-checkbox": "/miniprogram_npm/@vant/weapp/checkbox/index",
-        "van-sticky": "/miniprogram_npm/@vant/weapp/sticky/index"
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "WX_Shop",
+    "navigationBarBackgroundColor": "#DD6655"
+  },
+  "pages": [
+    "pages/home/home",
+    "pages/cate/cate",
+    "pages/cart/cart",
+    "pages/my/my"
+  ],
+  "tabBar": {
+    "selectedColor": "#FF888F",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "static/tab_icons/cate.png",
+        "selectedIconPath": "static/tab_icons/cate-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/tab_icons/cart.png",
+        "selectedIconPath": "static/tab_icons/cart-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "goods_detail/goods_detail",
+        "goods_list/goods_list",
+        "search/search",
+        "myaddress/myaddress"
+      ]
     }
+  ],
+  "usingComponents": {
+    "van-sidebar": "/miniprogram_npm/@vant/weapp/sidebar/index",
+    "van-sidebar-item": "/miniprogram_npm/@vant/weapp/sidebar-item/index",
+    "van-search": "/miniprogram_npm/@vant/weapp/search/index",
+    "van-tag": "/miniprogram_npm/@vant/weapp/tag/index",
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+    "van-buy": "/miniprogram_npm/@vant/weapp/goods-action/index",
+    "van-buy-icon": "/miniprogram_npm/@vant/weapp/goods-action-icon/index",
+    "van-buy-button": "/miniprogram_npm/@vant/weapp/goods-action-button/index",
+    "van-swipe-cell": "/miniprogram_npm/@vant/weapp/swipe-cell/index",
+    "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group",
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index",
+    "van-checkbox": "/miniprogram_npm/@vant/weapp/checkbox/index",
+    "van-sticky": "/miniprogram_npm/@vant/weapp/sticky/index",
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index"
+  }
 }

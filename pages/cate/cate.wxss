@@ -4,16 +4,15 @@
 }
 
 .sideBar {
-    width: 20%;
+    flex: 1;
     height: 100vh;
     /* 侧边栏占据整个页面高度 */
     overflow-y: auto;
-    /* overflow-y 属性用于控制垂直方向的内容溢出情况。 */
-    /* auto 表示当内容超过容器的高度时，自动生成一个 垂直滚动条，否则不会显示滚动条。 */
+    overflow-x: hidden;
 }
 
 .cate2Container {
-    width: 80%;
+    width: 600rpx;
     display: flex;
     flex-direction: column;
     height: 100vh;

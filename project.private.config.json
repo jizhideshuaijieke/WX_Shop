@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "myaddress",
+          "pathName": "subpkg/myaddress",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "cart",
           "pathName": "pages/cart/cart",
           "query": "",

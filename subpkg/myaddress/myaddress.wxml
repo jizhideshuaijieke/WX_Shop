@@ -1,0 +1,32 @@
+<view class="container">
+    <!-- 如果没有地址 -->
+    <view wx:if="{{places.length === 0}}" class="empty-container">
+        <text class="empty-text">暂无收货地址，请先添加！</text>
+        <van-button type="primary" color="#7232dd" plain hairline bind:click="showPopup" class="add-button">
+            填写收货地址 +
+        </van-button>
+    </view>
+
+    <!-- 如果有地址 -->
+    <view wx:else class="PlacesContainer">
+        <view wx:for="{{places}}" wx:key="index" wx:for-item="place" class="place">
+            <view bind:longpress="deletePlace" data-idx="{{index}}" class="place-card">
+                <text class="place-name">收件人：{{place.name}}   电话：{{place.tele}}</text>
+                <text class="place-address">收货地址：{{place.address}}</text>
+            </view>
+        </view>
+        <van-button icon="plus" plain hairline round block color="#93ff4b"bind:click="showPopup" />
+    </view>
+
+    <!-- 添加地址的弹窗 -->
+    <van-popup show="{{showPopup}}" position="bottom" round lock-scroll close-on-click-overlay bind:close="offPopup" class="popup-container">
+        <van-cell-group inset>
+            <van-field value="{{inputtingPlace.name}}" required label="收件人" placeholder="请输入收件人姓名" bind:input="onFieldChange" data-field="name" />
+            <van-field value="{{inputtingPlace.tele}}" required label="电话" placeholder="请输入联系电话" bind:input="onFieldChange" data-field="tele" />
+            <van-field value="{{inputtingPlace.address}}" required label="地址" placeholder="请输入收件地址" bind:input="onFieldChange" data-field="address" />
+        </van-cell-group>
+        <van-button bind:tap="saveNewPlace" plain hairline round block>
+            保存
+        </van-button>
+    </van-popup>
+</view>

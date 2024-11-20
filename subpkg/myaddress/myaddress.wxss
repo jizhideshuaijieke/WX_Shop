@@ -1,0 +1,79 @@
+/* 容器样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx;
+    background-color: #f9f9f9;
+}
+
+/* 空地址容器样式 */
+.empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300rpx;
+    text-align: center;
+}
+
+.empty-text {
+    font-size: 30rpx;
+    color: #888;
+    margin-bottom: 20rpx;
+}
+
+.add-button {
+    width: 200rpx;
+    background-color: #7232dd;
+    color: #fff;
+}
+
+/* 地址列表容器样式 */
+.PlacesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* 地址卡片样式 */
+.place-card {
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+    padding: 20rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-name {
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+}
+
+.place-address {
+    font-size: 26rpx;
+    color: #666;
+}
+
+/* 弹窗容器样式 */
+.popup-container {
+    background-color: #f4f4f4;
+    padding: 20rpx;
+    border-radius: 10rpx;
+}
+
+/* 输入框样式 */
+.van-field__control {
+    border-radius: 5rpx;
+    border: 1px solid #ccc;
+    padding: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+/* 弹窗关闭时的背景阴影 */
+.van-popup__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
