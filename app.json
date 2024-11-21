@@ -46,7 +46,8 @@
         "goods_detail/goods_detail",
         "goods_list/goods_list",
         "search/search",
-        "myaddress/myaddress"
+        "myaddress/myaddress",
+        "identify/identify"
       ]
     }
   ],

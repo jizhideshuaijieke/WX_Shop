@@ -1,0 +1,7 @@
+<camera 
+  device-position="back" 
+  frame-size="medium" 
+  bindframe="onFrame" 
+  style="width: 100%; height: 100%;">
+</camera>
+<canvas id="actionMarks" style="width: 100%; height: 100%;"></canvas>
